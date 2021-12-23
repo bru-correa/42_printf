@@ -1,0 +1,8 @@
+README.md
+.linux
+.vscode
+main.c
+*.a
+*.o
+debug
+tests
