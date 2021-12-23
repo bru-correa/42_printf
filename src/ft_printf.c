@@ -6,7 +6,7 @@
 /*   By: bcorrea- <bruuh.cor@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 23:17:24 by bcorrea-          #+#    #+#             */
-/*   Updated: 2021/12/15 16:37:36 by bcorrea-         ###   ########.fr       */
+/*   Updated: 2021/12/23 19:06:07 by bcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,8 +75,8 @@ int	handle_flags(const char *input, va_list args)
 	}
 	else
 	{
-		ft_putstr_fd("%%", 1);
-		length = 2;
+		ft_putchar_fd('%', 1);
+		length = 1;
 	}
 	return (length);
 }
