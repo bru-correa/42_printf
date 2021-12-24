@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   print_decimal.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcorrea- <bruuh.cor@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 23:04:03 by bcorrea-          #+#    #+#             */
-/*   Updated: 2021/12/24 17:20:07 by bcorrea-         ###   ########.fr       */
+/*   Created: 2021/12/24 14:53:01 by bcorrea-          #+#    #+#             */
+/*   Updated: 2021/12/24 17:17:12 by bcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include "libft.h"
-# include <stdarg.h>
+// int	print_decimal(unsigned long int decimal)
+// {
+// 	ft_putnbr_fd(decimal, 1);
+// 	return(count_digits(decimal));
+// }
 
-/* JUST FOR TESTING */
-int		ft_vprintf(const char *input, va_list args);
-/* JUST FOR TESTING */
-int		ft_printf(const char *input, ...);
-int		print_char(int character);
-int		print_string(char *str);
-int		print_decimal(long int decimal);
-int		count_digits(long int n);
-char	*ft_litoa(long int n);
-#endif
+int	print_decimal(long int decimal)
+{
+	char	*printable_number;
+	int		digits_count;
+
+	printable_number = ft_litoa(decimal);
+	digits_count = ft_strlen(printable_number);
+	ft_putstr_fd(printable_number, 1);
+	free(printable_number);
+	return (digits_count);
+}
