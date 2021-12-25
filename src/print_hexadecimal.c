@@ -6,16 +6,16 @@
 /*   By: bcorrea- <bruuh.cor@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 16:48:56 by bcorrea-          #+#    #+#             */
-/*   Updated: 2021/12/25 15:56:43 by bcorrea-         ###   ########.fr       */
+/*   Updated: 2021/12/25 16:02:36 by bcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	write_in_hexa(int n, char *base);
+static int	write_in_hexa(unsigned int n, char *base);
 int	print_pointer(void *pointer);
 
-int	print_hexadecimal(int n, const char flag)
+int	print_hexadecimal(unsigned int n, const char flag)
 {
 	char	*base;
 
@@ -26,7 +26,7 @@ int	print_hexadecimal(int n, const char flag)
 	return (write_in_hexa(n, base));
 }
 
-static int	write_in_hexa(int n, char *base)
+static int	write_in_hexa(unsigned int n, char *base)
 {
 	static int		write_count;
 
