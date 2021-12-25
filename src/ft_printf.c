@@ -6,7 +6,7 @@
 /*   By: bcorrea- <bruuh.cor@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 23:17:24 by bcorrea-          #+#    #+#             */
-/*   Updated: 2021/12/24 17:11:35 by bcorrea-         ###   ########.fr       */
+/*   Updated: 2021/12/25 15:54:40 by bcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,17 +66,15 @@ int	handle_flags(const char *input, va_list args)
 	int	length;
 
 	if (*input == 'c')
-	{
 		length = print_char(va_arg(args, int));
-	}
 	else if (*input == 's')
-	{
 		length = print_string(va_arg(args, char *));
-	}
 	else if (*input == 'd' || *input == 'i')
 		length = print_decimal(va_arg(args, int));
 	else if (*input == 'u')
 		length = print_decimal(va_arg(args, unsigned int));
+	else if (*input == 'x' || *input =='X')
+		length = print_hexadecimal(va_arg(args, int), *input);
 	else
 	{
 		ft_putchar_fd('%', 1);

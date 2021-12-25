@@ -6,7 +6,7 @@
 /*   By: bcorrea- <bruuh.cor@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 23:04:03 by bcorrea-          #+#    #+#             */
-/*   Updated: 2021/12/24 17:20:07 by bcorrea-         ###   ########.fr       */
+/*   Updated: 2021/12/25 15:51:57 by bcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ int		print_string(char *str);
 int		print_decimal(long int decimal);
 int		count_digits(long int n);
 char	*ft_litoa(long int n);
+int		print_hexadecimal(int n, const char flag);
 #endif
