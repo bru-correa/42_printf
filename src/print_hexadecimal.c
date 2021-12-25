@@ -6,7 +6,7 @@
 /*   By: bcorrea- <bruuh.cor@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 16:48:56 by bcorrea-          #+#    #+#             */
-/*   Updated: 2021/12/25 16:51:15 by bcorrea-         ###   ########.fr       */
+/*   Updated: 2021/12/25 17:29:18 by bcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,8 @@ int	print_pointer(void *ptr)
 	long int	*address;
 	int			write_count;
 
-	if (!ptr)
-	{
-		if (IS_MACOS)
-			return (write(1, "(nil)", 5));
-		else
-			return (write (1, "0x0", 3));
-	}
+	if (!ptr && !IS_MACOS)
+		return (write(1, "(nil)", 5));
 	address = (long int *)&ptr;
 	write_count = write (1, "0x", 2);
 	write_count += write_in_hexa(*address, HEXA_LOWER);
