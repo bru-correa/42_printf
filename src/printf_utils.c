@@ -6,7 +6,7 @@
 /*   By: bcorrea- <bruuh.cor@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 16:46:44 by bcorrea-          #+#    #+#             */
-/*   Updated: 2021/12/24 17:20:28 by bcorrea-         ###   ########.fr       */
+/*   Updated: 2021/12/25 17:14:45 by bcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ char	*ft_litoa(long int n)
 	result[length--] = '\0';
 	if (n == 0)
 		result[0] = '0';
-	else if (n < 0)
+	if (n < 0)
 	{
 		number = n * -1;
 		result[0] = '-';
