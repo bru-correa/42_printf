@@ -6,7 +6,7 @@
 /*   By: bcorrea- <bruuh.cor@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 23:17:24 by bcorrea-          #+#    #+#             */
-/*   Updated: 2021/12/25 16:01:28 by bcorrea-         ###   ########.fr       */
+/*   Updated: 2021/12/25 16:47:40 by bcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,8 @@ int	handle_flags(const char *input, va_list args)
 		length = print_decimal(va_arg(args, unsigned int));
 	else if (*input == 'x' || *input =='X')
 		length = print_hexadecimal(va_arg(args, unsigned int), *input);
+	else if (*input == 'p')
+		length = print_pointer(va_arg(args, void *));
 	else
 	{
 		ft_putchar_fd('%', 1);
