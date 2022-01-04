@@ -6,7 +6,7 @@
 /*   By: bcorrea- <bruuh.cor@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 23:04:03 by bcorrea-          #+#    #+#             */
-/*   Updated: 2021/12/25 16:49:12 by bcorrea-         ###   ########.fr       */
+/*   Updated: 2022/01/04 16:13:58 by bcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,13 @@
 #  define IS_MACOS 0
 # endif
 
-/* JUST FOR TESTING */
-int		ft_vprintf(const char *input, va_list args);
-/* JUST FOR TESTING */
 int		ft_printf(const char *input, ...);
 int		print_char(int character);
 int		print_string(char *str);
 int		print_decimal(long int decimal);
-int		count_digits(long int n);
-char	*ft_litoa(long int n);
 int		print_hexadecimal(unsigned int n, const char flag);
 int		print_pointer(void *ptr);
+int		count_digits(long int n);
+char	*ft_litoa(long int n);
+
 #endif

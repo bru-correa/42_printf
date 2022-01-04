@@ -12,12 +12,6 @@
 
 #include "ft_printf.h"
 
-// int	print_decimal(unsigned long int decimal)
-// {
-// 	ft_putnbr_fd(decimal, 1);
-// 	return(count_digits(decimal));
-// }
-
 int	print_decimal(long int decimal)
 {
 	char	*printable_number;

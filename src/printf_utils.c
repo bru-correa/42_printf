@@ -6,7 +6,7 @@
 /*   By: bcorrea- <bruuh.cor@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 16:46:44 by bcorrea-          #+#    #+#             */
-/*   Updated: 2021/12/25 17:14:45 by bcorrea-         ###   ########.fr       */
+/*   Updated: 2022/01/04 16:34:14 by bcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,4 @@ char	*ft_litoa(long int n)
 		number = number / 10;
 	}
 	return (result);
-
 }
